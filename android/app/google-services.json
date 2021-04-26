@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "879127647541",
+    "project_id": "healthycheck-a57e1",
+    "storage_bucket": "healthycheck-a57e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879127647541:android:258a4dfa0896ad13bae87c",
+        "android_client_info": {
+          "package_name": "com.example.healthycheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879127647541-ufbtthi7vjqm5pgic08u4asb1gvs0d8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthycheck",
+            "certificate_hash": "a0cd7fb0770a8e45eb0d708769d17a110a51ff79"
+          }
+        },
+        {
+          "client_id": "879127647541-n26k3i0bcvb5gu9d2302o3qklm0327c5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0tUBsY6eryiOkyrRyvYckjvNMSShFLlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879127647541-n26k3i0bcvb5gu9d2302o3qklm0327c5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
