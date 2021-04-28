@@ -10,14 +10,14 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-   Map<String, dynamic> _profile;
-   bool _loading = false;
-   @override
-  void initState() {
-    super.initState();
-    authService.profile.listen((state) => setState(() => _profile = state));
-    authService.loading.listen((state) => setState(() => _loading = state));
-  }
+  //  Map<String, dynamic> _profile;
+  //  bool _loading = false;
+  //  @override
+  // void initState() {
+  //   super.initState();
+  //   authService.profile.listen((state) => setState(() => _profile = state));
+  //   authService.loading.listen((state) => setState(() => _loading = state));
+  // }
   
 
   @override
@@ -40,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Container(
                     color: Colors.white,
                     //child: Text("This the container"),
-                    child: Text(_profile.toString()),
+                    //child: Text(_profile.toString()),
                   ),
                 ),
               ),

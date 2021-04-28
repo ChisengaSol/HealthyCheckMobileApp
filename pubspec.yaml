@@ -32,14 +32,19 @@ dependencies:
   http:
   webview_flutter:
   url_launcher:
+  charts_flutter: ^0.10.0
+  #intl: ^0.16.1
+  flutter_local_notifications: ^5.0.0+3
+  provider: ^5.0.0
+  firebase_auth: ^1.1.1
+  cloud_firestore: ^1.0.6
+  firebase_core: ^1.0.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  firebase_core: ^1.0.4
+  
   #firebase_analytics: ^1.0.4
-  firebase_auth: ^1.1.1
-  cloud_firestore: ^1.0.6
   google_sign_in: ^5.0.2
   rxdart: ^0.22.2
 
