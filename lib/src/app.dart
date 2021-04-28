@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:healthycheck/ui/pages/profile_screen.dart';
 import 'package:healthycheck/views/home.dart';
@@ -14,9 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-     // home: Home(),
-     //home: ProfileScreen(),
-     home: Navigation(),
+       //home: Home(),
+      //home: ProfileScreen(),
+      home: Navigation(),
+     // home: WelcomeScreen(),
     );
   }
 }
@@ -34,7 +38,6 @@ class _NavigationState extends State<Navigation> {
     Home(),
     UserDetails(),
     //UserProfile(),
-    
   ];
 
   void onTappedBar(int index) {
@@ -42,11 +45,11 @@ class _NavigationState extends State<Navigation> {
       _currentIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _list[_currentIndex],
-
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
         child: BottomNavigationBar(
@@ -92,10 +95,95 @@ class _NavigationState extends State<Navigation> {
           ],
         ),
       ),
-      
     );
   }
 }
 
-
-
+class WelcomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/health.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "HEALTHY",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "CHECK",
+                        //style: Theme.of(context).textTheme.display1,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                FittedBox(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return UserDetails();
+                        },
+                      ));
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 25),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.lightBlue,
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            "START LEARNING",
+                            style: Theme.of(context).textTheme.button.copyWith(
+                                  color: Colors.black,
+                                ),
+                          ),
+                          SizedBox(width: 10),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

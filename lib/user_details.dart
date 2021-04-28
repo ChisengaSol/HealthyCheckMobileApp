@@ -15,7 +15,9 @@ class _UserDetailsState extends State<UserDetails> {
       //    child: SignUpWidget(),
       //  ),
       body: Center(
+      
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             LoginButton(),
             UserProfile(),
@@ -23,8 +25,6 @@ class _UserDetailsState extends State<UserDetails> {
           ],
 
         ),
-        //child: LoginButton(),
-        //child: UserProfile(),
       ),
     );
   }

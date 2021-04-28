@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:healthycheck/models/meal.dart';
 import 'package:healthycheck/ui/pages/meal_details_screen.dart';
 
+import '../../auth.dart';
+
 class ProfileScreen extends StatefulWidget {
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+   Map<String, dynamic> _profile;
+   bool _loading = false;
+   @override
+  void initState() {
+    super.initState();
+    authService.profile.listen((state) => setState(() => _profile = state));
+    authService.loading.listen((state) => setState(() => _loading = state));
+  }
   
 
   @override
@@ -30,6 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Container(
                     color: Colors.white,
                     //child: Text("This the container"),
+                    child: Text(_profile.toString()),
                   ),
                 ),
               ),
