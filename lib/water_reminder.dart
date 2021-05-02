@@ -52,6 +52,10 @@ class _DrinkWaterReminderState extends State<DrinkWaterReminder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Drink water reminder"),
+        backgroundColor: const Color(0xff200bb7),
+      ),
       body: Center(
         // child: RaisedButton(
         //   onPressed: _showNotification,
@@ -69,6 +73,7 @@ class _DrinkWaterReminderState extends State<DrinkWaterReminder> {
                 onChanged: (_val) {
                   task = _val;
                 },
+              
               ),
             ),
             Row(
@@ -127,7 +132,8 @@ class _DrinkWaterReminderState extends State<DrinkWaterReminder> {
               ],
             ),
             RaisedButton(onPressed: _showNotification,
-            child: new Text("Set new task with Notification"),)
+            color: Colors.grey,
+            child: new Text("Set Reminder"),)
           ],
         ),
       ),

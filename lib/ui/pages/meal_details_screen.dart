@@ -38,7 +38,7 @@ class MealScreenDetails extends StatelessWidget {
                     meal.mealTime.toUpperCase(),
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
-                      fontSize: 14,
+                      fontSize: 17,
                       color: Colors.blueGrey,
                     ),
                   ),
@@ -63,10 +63,11 @@ class MealScreenDetails extends StatelessWidget {
                             "${meal.kiloCaloriesBurnt} kcal",
                             style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600, fontSize: 16),
                           ),
+              
                         ],
                       ),
                       SizedBox(
-                        height: 4,
+                        height: 10,
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,

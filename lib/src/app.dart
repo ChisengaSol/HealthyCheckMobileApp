@@ -73,9 +73,9 @@ class _NavigationState extends State<Navigation> {
             BottomNavigationBarItem(
               icon: Padding(
                   padding: const EdgeInsets.only(top: 8.0),
-                  child: Icon(Icons.search)),
+                  child: Icon(Icons.food_bank_outlined)),
               title: Text(
-                "Search",
+                "Recipe",
                 style: const TextStyle(
                   color: Colors.white,
                 ),

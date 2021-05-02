@@ -43,16 +43,21 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xff200bb7),
+        title: Text("See recipes"),
+      ),
       body: Stack(
         children: <Widget>[
           Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  const Color(0xff213a50),
-                  const Color(0xff071930),
-                ]),
+                // gradient: LinearGradient(colors: [
+                //   const Color(0xff213a50),
+                //   const Color(0xff071930),
+                // ]),
+                color: const Color(0xFFE9E9E9),
               )),
           SingleChildScrollView(
             child: Container(
@@ -61,40 +66,12 @@ class _HomeState extends State<Home> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Row(
-                    mainAxisAlignment: kIsWeb
-                        ? MainAxisAlignment.start
-                        : MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "Healthy",
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        "Check",
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Text("What will you cook",
-                      style: TextStyle(fontSize: 20, color: Colors.white)),
                   SizedBox(
                     height: 8.0,
                   ),
                   Text(
-                    "Enter ingredient and wil show you recipes",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
+                    "Provide an ingridient and all the blogs for recipes with the ingredient will be appear", 
+                    style: TextStyle(fontSize: 18, color: Colors.blueGrey),
                   ),
                   SizedBox(
                     height: 30,
@@ -109,11 +86,11 @@ class _HomeState extends State<Home> {
                             decoration: InputDecoration(
                               hintText: "Enter ingridient",
                               hintStyle: TextStyle(
-                                color: Colors.white.withOpacity(0.5),
+                                color: Colors.blueGrey.withOpacity(0.5),
                               ),
                             ),
                             style:
-                                TextStyle(fontSize: 18.0, color: Colors.white),
+                                TextStyle(fontSize: 18.0, color: Colors.blueGrey),
                           ),
                         ),
                         SizedBox(
@@ -131,13 +108,14 @@ class _HomeState extends State<Home> {
                           child: Container(
                             child: Icon(
                               Icons.search,
-                              color: Colors.white,
+                              color: Colors.blueGrey,
                             ),
                           ),
                         ),
                       ],
                     ),
                   ),
+                  SizedBox(height: 10.0,),
                   Container(
                     child: GridView(
                       shrinkWrap: true,
